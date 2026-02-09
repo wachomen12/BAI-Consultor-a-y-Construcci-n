@@ -1,0 +1,323 @@
+/* ========================================
+   NAVBAR - Diseño Premium Arquitectura
+   ======================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(15, 23, 42, 0.6);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========== LOGO ========== */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1001;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .logo-text {
+  transform: scale(1.02);
+}
+
+.logo-bai {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.logo-b {
+  color: #f1f5f9;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-a {
+  color: #10b981;
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 -1px;
+}
+
+.logo-i {
+  color: #f1f5f9;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+/* Efecto edificio en la I */
+.logo-i::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 2px;
+  width: 6px;
+  height: 18px;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    #10b981 10%, 
+    #10b981 20%, 
+    transparent 22%,
+    #10b981 24%,
+    #10b981 34%,
+    transparent 36%,
+    #10b981 38%,
+    #10b981 48%,
+    transparent 50%,
+    #10b981 52%,
+    #10b981 62%,
+    transparent 64%,
+    #10b981 66%,
+    #10b981 76%,
+    transparent 78%,
+    #10b981 80%,
+    #10b981 100%
+  );
+  opacity: 0.5;
+}
+
+.logo-tagline {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 2px;
+  padding-left: 2px;
+}
+
+/* ========== MENU ========== */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-menu li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.navbar-menu li a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Botón CTA Contacto */
+.navbar-menu li a.navbar-cta {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 1.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.navbar-menu li a.navbar-cta:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+/* ========== HAMBURGER ========== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1001;
+  transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========== OVERLAY MÓVIL ========== */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.navbar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 85vw;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 100px 2rem 2rem;
+    gap: 0.5rem;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .navbar-menu li a {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    color: #e2e8f0;
+  }
+
+  .navbar-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-menu li a.navbar-cta {
+    margin-left: 0;
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .logo-bai {
+    font-size: 1.75rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.55rem;
+  }
+
+  .logo-i::after {
+    width: 5px;
+    height: 14px;
+    right: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .logo-bai {
+    font-size: 1.5rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.5rem;
+  }
+
+  .logo-i::after {
+    display: none;
+  }
+
+  .navbar-menu {
+    padding-top: 80px;
+  }
+}
