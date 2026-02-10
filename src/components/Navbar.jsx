@@ -25,14 +25,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#inicio" className="navbar-logo" onClick={closeMenu}>
-          <div className="logo-text">
-            <span className="logo-bai">
-              <span className="logo-b">B</span>
-              <span className="logo-a">A</span>
-              <span className="logo-i">I</span>
-            </span>
-            <span className="logo-tagline">Consultoría y Construcción</span>
-          </div>
+          <img src="/logo-bai.png?v=6" alt="BAI Consultoría y Construcción" className="navbar-logo-img" />
         </a>
 
         <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>

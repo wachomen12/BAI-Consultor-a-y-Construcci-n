@@ -8,14 +8,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-brand">
-            <div className="footer-logo-text">
-              <span className="footer-logo-bai">
-                <span className="footer-logo-b">B</span>
-                <span className="footer-logo-a">A</span>
-                <span className="footer-logo-i">I</span>
-              </span>
-              <span className="footer-logo-tagline">Consultoría y Construcción</span>
-            </div>
+            <img src="/logo-bai.png?v=6" alt="BAI Consultoría y Construcción" className="footer-logo-img" />
             <p>Tu proyecto con seguridad, estética, funcionalidad y eficiencia garantizado.</p>
           </div>
 
