@@ -24,7 +24,9 @@ export const projects = [
       "/images/urbana2.jpg",
       "/images/urbana3.jpg",
       "/images/urbana4.jpg",
-      "/images/urbana5.jpg"
+      "/images/urbana5.jpg",
+      "/images/urbana6.jpg",
+      "/images/urbana7.jpg"
     ]
   },
   {
@@ -53,7 +55,17 @@ export const projects = [
       "/images/tm3.jpg",
       "/images/tm4.jpg",
       "/images/tm5.jpg",
-      "/images/tm6.jpg"
+      "/images/tm6.jpg",
+      "/images/tm7.jpg",
+      "/images/tm8.jpg",
+      "/images/tm9.jpg",
+      "/images/tm10.jpg",
+      "/images/tm11.jpg",
+      "/images/tm12.jpg",
+      "/images/tm13.jpg",
+      "/images/tm14.jpg",
+      "/images/tm15.jpg",
+      "/images/tm16.jpg"
     ]
   },
   {
@@ -80,7 +92,11 @@ export const projects = [
       "/images/papachos1-1.jpg",
       "/images/papachos1-2.jpg",
       "/images/papachos1-3.jpg",
-      "/images/papachos1-4.jpg"
+      "/images/papachos1-4.jpg",
+      "/images/papachos1-5.jpg",
+      "/images/papachos1-6.jpg",
+      "/images/papachos1-7.jpg"
+      
     ]
   },
   {
@@ -110,7 +126,10 @@ export const projects = [
       "/images/papachos2-4.jpg",
       "/images/papachos2-5.jpg",
       "/images/papachos2-6.jpg",
-      "/images/papachos2-7.jpg"
+      "/images/papachos2-7.jpg",
+       "/images/papachos2-8.jpg",
+      "/images/papachos2-9.jpg",
+      "/images/papachos2-10.jpg"
     ]
   },
   {
@@ -140,7 +159,12 @@ export const projects = [
       "/images/e11-4.jpg",
       "/images/e11-5.jpg",
       "/images/e11-6.jpg",
-      "/images/e11-7.jpg"
+      "/images/e11-7.jpg",
+      "/images/e11-8.jpg",
+      "/images/e11-9.jpg",
+      "/images/e11-10.jpg",
+      "/images/e11-11.jpg",
+      "/images/e11-12.jpg"
     ]
   },
   {
@@ -167,7 +191,12 @@ export const projects = [
       "/images/oficina1.jpg",
       "/images/oficina2.jpg",
       "/images/oficina3.jpg",
-      "/images/oficina4.jpg"
+      "/images/oficina4.jpg",
+      "/images/oficina5.jpg",
+      "/images/oficina6.jpg",
+      "/images/oficina7.jpg",
+      "/images/oficina8.jpg",
+      "/images/oficina9.jpg"
     ]
   },
   {
@@ -199,7 +228,14 @@ export const projects = [
       "/images/rosalinda6.jpg",
       "/images/rosalinda7.jpg",
       "/images/rosalinda8.jpg",
-      "/images/rosalinda9.jpg"
+      "/images/rosalinda9.jpg",
+       "/images/rosalinda10.jpg",
+       "/images/rosalinda11.jpg",
+       "/images/rosalinda12.jpg",
+       "/images/rosalinda13.jpg",
+       "/images/rosalinda14.jpg",
+       "/images/rosalinda15.jpg",
+       "/images/rosalinda16.jpg"
     ]
   },
   {
@@ -228,7 +264,13 @@ export const projects = [
       "/images/ch3.jpg",
       "/images/ch4.jpg",
       "/images/ch5.jpg",
-      "/images/ch6.jpg"
+      "/images/ch6.jpg",
+      "/images/ch7.jpg",
+      "/images/ch8.jpg",
+      "/images/ch9.jpg",
+      "/images/ch10.jpg",
+      "/images/ch11.jpg"
+     
     ]
   },
   {
@@ -256,7 +298,11 @@ export const projects = [
       "/images/pry2.jpg",
       "/images/pry3.jpg",
       "/images/pry4.jpg",
-      "/images/pry5.jpg"
+      "/images/pry5.jpg",
+      "/images/pry6.jpg",
+      "/images/pry7.jpg",
+      "/images/pry8.jpg",
+      "/images/pry9.jpg"
     ]
   },
 
