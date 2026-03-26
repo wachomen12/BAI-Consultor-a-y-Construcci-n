@@ -25,6 +25,7 @@ function Portfolio() {
   const [imageLoaded, setImageLoaded] = useState(false)
   const [activeFilter, setActiveFilter] = useState('todos')
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [enableTilt, setEnableTilt] = useState(false)
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === 'todos') return projects
@@ -91,6 +92,54 @@ function Portfolio() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [selectedProject, closeModal, nextImage, prevImage])
 
+  useEffect(() => {
+    const motionMedia = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const interactionMedia = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 901px)')
+
+    const updateTiltAvailability = () => {
+      setEnableTilt(interactionMedia.matches && !motionMedia.matches)
+    }
+
+    updateTiltAvailability()
+
+    interactionMedia.addEventListener('change', updateTiltAvailability)
+    motionMedia.addEventListener('change', updateTiltAvailability)
+
+    return () => {
+      interactionMedia.removeEventListener('change', updateTiltAvailability)
+      motionMedia.removeEventListener('change', updateTiltAvailability)
+    }
+  }, [])
+
+  const handleCardMouseMove = useCallback((event) => {
+    if (!enableTilt) return
+
+    const card = event.currentTarget
+    const rect = card.getBoundingClientRect()
+    const x = (event.clientX - rect.left) / rect.width
+    const y = (event.clientY - rect.top) / rect.height
+
+    const rotateY = (x - 0.5) * 10
+    const rotateX = (0.5 - y) * 10
+    const glareX = x * 100
+    const glareY = y * 100
+
+    card.style.setProperty('--tilt-rotate-x', `${rotateX.toFixed(2)}deg`)
+    card.style.setProperty('--tilt-rotate-y', `${rotateY.toFixed(2)}deg`)
+    card.style.setProperty('--tilt-glare-x', `${glareX.toFixed(1)}%`)
+    card.style.setProperty('--tilt-glare-y', `${glareY.toFixed(1)}%`)
+    card.style.setProperty('--tilt-glare-opacity', '0.26')
+    card.classList.add('is-tilting')
+  }, [enableTilt])
+
+  const handleCardMouseLeave = useCallback((event) => {
+    const card = event.currentTarget
+    card.style.setProperty('--tilt-rotate-x', '0deg')
+    card.style.setProperty('--tilt-rotate-y', '0deg')
+    card.style.setProperty('--tilt-glare-opacity', '0')
+    card.classList.remove('is-tilting')
+  }, [])
+
   return (
     <section id="proyectos" className="portfolio">
       <div className="portfolio-container">
@@ -124,6 +173,8 @@ function Portfolio() {
               key={project.id}
               className={`portfolio-card ${i === 0 ? 'portfolio-card--featured' : ''}`}
               onClick={() => openModal(project)}
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
               style={{ animationDelay: `${i * 0.08}s` }}
             >
               <div className="portfolio-card-image">

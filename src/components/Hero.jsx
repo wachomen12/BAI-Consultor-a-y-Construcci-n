@@ -1,8 +1,15 @@
+import { Suspense, lazy } from 'react'
 import './Hero.css'
+
+const HeroScene3D = lazy(() => import('./HeroScene3D'))
 
 function Hero() {
   return (
     <section id="inicio" className="hero">
+      <Suspense fallback={null}>
+        <HeroScene3D />
+      </Suspense>
+
       {/* Animated background elements */}
       <div className="hero-bg-lines" aria-hidden="true">
         <div className="hero-line hero-line--1"></div>

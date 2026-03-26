@@ -78,20 +78,21 @@ function About() {
           <span className="about-label">Quiénes Somos</span>
           <h2>Sobre Nosotros</h2>
           <p className="about-subtitle">
-            Somos una empresa especializada en diseño arquitectónico y construcción, 
-            comprometidos con la excelencia y la innovación en cada proyecto.
+            Diseñamos y construimos con un estándar superior, integrando arquitectura, 
+            ingeniería estructural sismo resistente y ejecución técnica de alto nivel.
           </p>
         </div>
 
         <div className="about-intro">
           <p>
-            En <strong>BAI Consultoría y Construcción</strong>, transformamos ideas en espacios 
-            extraordinarios. Con años de experiencia en el sector, nuestro equipo de profesionales 
-            combina creatividad, técnica y pasión para entregar proyectos que superan expectativas.
+            En <strong>BAI Consultoría y Construcción</strong> desarrollamos proyectos de alto desempeño 
+            donde el diseño arquitectónico, el diseño estructural y la construcción trabajan como un 
+            solo sistema para garantizar seguridad, precisión y durabilidad.
           </p>
           <p>
-            Desde el concepto inicial hasta la entrega final, acompañamos a nuestros clientes 
-            en cada etapa del proceso, garantizando resultados que perduran en el tiempo.
+            Cada obra se concibe como una solución única: analizamos, calculamos y ejecutamos con 
+            criterio ingenieril, acompañando a nuestros clientes con una gestión transparente que 
+            transforma su inversión en valor tangible y resultados que perduran en el tiempo.
           </p>
         </div>
 
